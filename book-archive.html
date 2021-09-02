@@ -7,44 +7,24 @@
     <title>Book Archive</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 </head>
-<body>
-    <section class="container my-2 text-center">
+<body class="bg-success p-2" style="--bs-bg-opacity: .5;">
+    <!-- Search Area -->
+    <section class="container text-center my-2">
         <h1>Book Archive</h1>
         <!-- Input Box -->
-        <div class="d-flex">
-            <input type="text" class="form-control me-2" id="searchInput" placeholder="Search Your Favourite Book">
-            <button class="btn btn-dark">Search</button>
+        <div class="d-flex w-50 mx-auto">
+            <input type="text" class="form-control me-2" id="search-field" placeholder="Search Your Favourite Book">
+            <button onclick="searchBook()" class="btn btn-dark" id="search-btn">Search</button>
         </div>
     </section>
 
-    <section class="container">
-        <!-- Book Details -->
-        <div class="row">
-            <div class="col-md-12">
-                <h1>White Fang</h1>
-                <p>Details</p>
-                <p>Details</p>
-            </div>
-        </div>
-    </section>
-    <section class="container mt-2">
-        <!-- Books Cover Photo -->
-        <div id="book-container" class="row">
-            <div class="col-md-3 col-12">
-                <!-- Image -->
-                <div class="rounded overflow-hidden border p-2">
-                    <img src="" alt="" class="w-100">
-                </div>
-                <div class="py-2 d-flex justify-content-between align-items-center d-md-block text-md-center">
-                    <h1>White Fang</h1>
-                    <button class="btn btn-dark">Learn More</button>
-                </div>
-            </div>
-        </div>
-    </section>
-    
+    <!-- Search Result -->
+    <div id="search-result" class="row row-cols-1 row-cols-md-3 g-4">
+
+    </div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
-    <script src="js/main.js"></script>
+    <script src="js/book-archive.js"></script>
 </body>
 </html>
